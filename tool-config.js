@@ -1,0 +1,59 @@
+export const tool={
+  "id": "E085",
+  "slug": "eng-skin-depth",
+  "title": "양도체 표피깊이 계산기",
+  "title_en": "Good Conductor Skin Depth Calculator",
+  "category": "전기",
+  "category_en": "Electrical engineering",
+  "fields": [
+    {
+      "key": "freq",
+      "label": "주파수 f",
+      "label_en": "Frequency f",
+      "dimension": "frequency",
+      "example": 1000,
+      "constraint": "positive",
+      "display_unit": "Hz",
+      "display_value": "1000"
+    },
+    {
+      "key": "mur",
+      "label": "상대투자율 μ_r",
+      "label_en": "Relative permeability μ_r",
+      "dimension": "ratio",
+      "example": 1,
+      "constraint": "positive",
+      "display_unit": "1",
+      "display_value": "1"
+    },
+    {
+      "key": "sigma",
+      "label": "전기전도도 σ",
+      "label_en": "Electrical conductivity σ",
+      "dimension": "electricalConductivity",
+      "example": 58000000.0,
+      "constraint": "positive",
+      "display_unit": "Sm",
+      "display_value": "58000000"
+    }
+  ],
+  "result_label": "표피깊이 δ",
+  "result_label_en": "Skin depth δ",
+  "result_dimension": "length",
+  "formula": "δ = √(1/(πf μ₀μ_r σ))",
+  "purpose": "양도체 근사에서 전자기장 진폭의 1/e 감쇠 깊이 계산",
+  "purpose_en": "Calculate the electromagnetic amplitude 1/e depth in the good-conductor approximation.",
+  "assumptions": "f,μ_r,σ>0. 주파수에 맞는 선형 물성과 양도체 근사를 사용한다. 깊이는 진폭의 1/e 기준이다. 변위전류·강자성 비선형·유한 두께·표면 거칠기는 제외한다.",
+  "assumptions_en": "Required: f,μ_r,σ>0, linear properties at the selected frequency, and the good-conductor approximation. The depth is for amplitude decay to 1/e. Displacement current, nonlinear magnetism, finite thickness and roughness are excluded.",
+  "sources": [
+    {
+      "label": "US EPA · Skin depth",
+      "url": "https://www.epa.gov/environmental-geophysics/electromagnetic-signal-attenuation-skin-depth"
+    }
+  ],
+  "condition": "주파수에 맞는 선형 물성과 양도체 근사 조건을 확인했습니다.",
+  "condition_en": "I confirm linear frequency-appropriate properties and the good-conductor approximation.",
+  "site": "https://nanalab.kr/eng-skin-depth/",
+  "repository": "https://github.com/NaNaCompany/eng-skin-depth",
+  "output_unit": "m"
+};
